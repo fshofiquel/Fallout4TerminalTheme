@@ -1,3 +1,5 @@
+/* font Import */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 /**
  * @name Fallout 4 Terminal
  * @author Bates#7075
@@ -19,12 +21,21 @@
 
 /* TO CUSTOMIZE THE THEME, UNCOMMENT THE LINES BELOW AND REPLACE THE VARIABLES */
 
-/* REMOVE THIS LINE TO UNCOMMENT
+REMOVE THIS LINE TO UNCOMMENT
 
 :root {
-  --background: #000700 !important;
-  --text-color: #4AEF98 !important;
-  --highlight: var(--text-color) !important;
+/* Font change */
+::-webkit-input-placeholder, body, button, input, select, textarea{
+font-family: 'JetBrains Mono', sans-serif;
 }
 
-   REMOVE THIS LINE TO UNCOMMENT ASWELL */
+[class^="channel-"] > div > [href="/store"], /* Nitro Button above DM List */
+[class^="channelTextArea"] [class^="buttons-"] > button, /* Gift Button */
+[class^="upsellVisible-"], /* Banner Nitro Upsell Header in the user modal */
+[class^="premiumIconWrapper"], /* Nitro Icon in top right on Banners */
+[class^="characterCount-"] [class*="upsell-"], /* "Send longer Messages with Discord Nitro!" */
+[class^="emojiSection-"] [class*="shinyButton-"] /* "Get Nitro" button in Emoji/Sticker modal" */
+{
+    display: none !important;
+}
+}
